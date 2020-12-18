@@ -1,19 +1,23 @@
 # Brainfuck Interpreter
 
-This is my personal [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck) interpreter that I'm working on in my spare time to practice my C programming skills, it's still heavily in-development so don't expect any usability as of now.
+A rudimentary interpreter for the [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck) programming language.
 
-## Cheatsheet
+Still in-development, do not expect usability.
+
+## Instructions
+
+Below is a table that shows each Brainfuck instruction and describes what it does.
 
 | Instruction | C equivalent      | Description |
 | :---------: | :---------------: | ----------- |
-| `>`         | `++ptr;`          | Increment data pointer (to point to the next cell in the right) |
-| `>`         | `--ptr;`          | Decrement data pointer (to pont to the next cell to the left) |
-| `-`         | `--*ptr;`         | Decrement the byte at the data pointer |
-| `+`         | `++*ptr;`         | Increment the byte at the data pointer |
-| `.`         | `putchar(*ptr);`  | Output the byte at the data pointer |
-| `,`         | `*ptr=getchar();` | Accept one byte of input, storing its value in the byte at the data pointer |
-| `[`         | `while(*ptr){`    | If the byte at the data pointer is zero, jump it forward to the command after the matching `]` |
-| `]`         | `}`               | if the byte at the data pointer is non-zero, jump it back to the command after the matching `[` |
+| `>`         | `++ptr;`          | Increment data pointer (to point to the next cell in the right). |
+| `>`         | `--ptr;`          | Decrement data pointer (to pont to the next cell to the left). |
+| `-`         | `--*ptr;`         | Decrement the byte at the data pointer. |
+| `+`         | `++*ptr;`         | Increment the byte at the data pointer. |
+| `.`         | `putchar(*ptr);`  | Output the byte at the data pointer. |
+| `,`         | `*ptr=getchar();` | Accept one byte of input, storing its value in the byte at the data pointer. |
+| `[`         | `while(*ptr){`    | If the byte at the data pointer is zero, jump it forward to the command after the matching `]`. |
+| `]`         | `}`               | If the byte at the data pointer is non-zero, jump it back to the command after the matching `[`. |
 
 ## License
 
@@ -40,4 +44,4 @@ OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-For more information, please refer to <http://unlicense.org/>.
+For more information, please refer to <http://unlicense.org/>
